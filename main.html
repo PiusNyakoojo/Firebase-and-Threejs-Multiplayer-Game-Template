@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<title>3D Multiplayer Game</title>
+	<link rel='stylesheet' href="css/main.css" />
+	<script src="https://www.gstatic.com/firebasejs/3.0.0/firebase.js"></script>
+	<script src="http://threejs.org/build/three.js"></script>
+	<script src="js/lib/PlayerControls.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBBoUAugAfEHoWA_6ANFwih5D330tLEN0A",
+	    authDomain: "mptemplate1.firebaseapp.com",
+	    databaseURL: "https://mptemplate1.firebaseio.com",
+	    storageBucket: "mptemplate1.appspot.com",
+	  };
+	  firebase.initializeApp(config);
+
+	  var fbRef = firebase.database().ref("data");
+	</script>
+</head>
+<body>
+	<div id='container'></div>
+	<script src="js/player.js"></script>
+	<script src="js/game.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
