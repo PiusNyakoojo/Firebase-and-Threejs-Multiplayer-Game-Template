@@ -1,0 +1,17 @@
+{
+	"data": {
+      "Players": {
+ 				".read": "auth != null",
+        "$user_id": {
+          ".write": "$user_id === auth.uid",
+          "orientation": {
+            "$orientation_type": {
+              "$orientation_axis": {
+                ".validate": "(!data.exists() || !newData.exists()) || (newData.isNumber() && (newData.val() - data.val() < 1) && (newData.val() - data.val() > -1))"
+              }
+            }
+          }
+        }
+      }
+    }
+}
